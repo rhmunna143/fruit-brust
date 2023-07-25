@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Fruit Burst</title>
     
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
     <!-- tailwind css and daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,29 +18,84 @@
     <!-- tailwind customization script -->
     <script>
             tailwind.config = {
-      theme: {
+    theme: {
         extend: {
-          colors: {
-            clifford: '#da373d',
-          }
-        }
-      }
+        colors: {
+            primary: '#F85559',
+        },
+
+        backgroundImage: {
+        'hero-pattern': "url('/img/hero-pattern.svg')",
+        'footer-texture': "url('/img/footer-texture.png')",
+        }}
+    }
     }
     </script>
     
     <!-- internal css -->
     <style>
+        .font-lato {
+            font-family: 'Lato', sans-serif;
+        }
+
         .bg-img {
             background-image: url('./images/');
         }
-    </style>
-</head>
-<body>
-    <!-- header section -->
-    <header>
-        <!-- nav section -->
-        <nav>
 
+        input[type="text"] {
+            background-image: url('./images/magnifying-glass-solid.svg');
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 10%;
+        }
+    </style>
+
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/92c3f0ab6e.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-lato">
+    <!-- header section -->
+    <header class="max-w-6xl mx-auto">
+        <!-- nav section -->
+        <nav class="mt-4">
+            <!-- daisy khala's nav -->
+
+            <!-- menus -->
+            <div class="navbar text-black md:bg-primary rounded-[600px] items-center flex-1">
+                <div class="navbar-center p-4 flex-1 flex-nowrap hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-white text-lg font-medium">
+                      <li><a>Home</a></li>
+                      <li><a>About Us</a></li>
+                      <li><a>Shop</a></li>
+                      <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+
+                <!-- logo -->
+                <div class="flex-1 p-4">
+                    <a class="">
+                        <div class="flex justify-center items-center gap-2">
+                            <img src="./images/logo.png" alt="" class="">
+                            <h4 class="text-right text-4xl font-bold md:text-white">Fruit Burst</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- search box -->
+                <div class="navbar-center hidden md:flex">
+                    <input type="text" placeholder="Search" class="input input-bordered w-24 px-5 py-4 mr-4 md:w-80 md:h-10" />
+                </div>
+
+                <!-- Hamburger Menu -->
+                <nav class="flex items-center justify-end lg:hidden">
+                    <button class="hamburger-btn px-2 py-4">
+                        <span class="block h-1 w-6 rounded bg-black"></span>
+                        <span class="block h-1 w-6 rounded bg-black mt-1"></span>
+                        <span class="block h-1 w-6 rounded bg-black mt-1"></span>
+                    </button>
+                </nav>
+            </div>
         </nav>
 
         <!-- banner section -->
@@ -45,7 +105,7 @@
     </header>
 
     <!-- main content section -->
-    <main>
+    <main class="max-w-6xl mx-auto">
 
     </main>
 
