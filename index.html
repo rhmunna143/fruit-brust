@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     
     <title>Fruit Burst</title>
     
@@ -22,12 +24,17 @@
         extend: {
         colors: {
             primary: '#F85559',
+            sec: '#121212',
         },
 
         backgroundImage: {
-        'hero-pattern': "url('/img/hero-pattern.svg')",
+        'banner1': "url('/images/banner1.png')",
+        'banner2': "url('/images/banner2.png')",
+        'banner3': "url('/images/banner3.png')",
+        'banner4': "url('/images/banner4.png')",
         'footer-texture': "url('/img/footer-texture.png')",
-        }}
+        },
+    }
     }
     }
     </script>
@@ -38,8 +45,29 @@
             font-family: 'Lato', sans-serif;
         }
 
-        .bg-img {
-            background-image: url('./images/');
+        .img1 {
+            background: url('./images/banner1.png'), linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%);
+            background-blend-mode: overlay;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .img2 {
+            background: url('./images/banner2.png'), linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%);
+            background-blend-mode: overlay;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .img3 {
+            background: url('./images/banner3.png'), linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%);
+            background-blend-mode: overlay;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .img4 {
+            background: url('./images/banner4.png'), linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%);
+            background-blend-mode: overlay;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         input[type="text"] {
@@ -58,7 +86,7 @@
     <!-- header section -->
     <header class="max-w-6xl mx-auto">
         <!-- nav section -->
-        <nav class="mt-4">
+        <nav class="mt-5">
             <!-- daisy khala's nav -->
 
             <!-- menus -->
@@ -99,8 +127,82 @@
         </nav>
 
         <!-- banner section -->
-        <section>
+        <section class="mt-5">
+            <!-- daisy khala's carousel -->
+            <div class="carousel w-full">
+                <!-- slide 1 -->
+                <div id="slide1" class="carousel-item relative w-full img1 lg:h-[75vh]">
+                    <!-- content -->
+                    <div class="flex text-center justify-center items-center text-white w-4/5 mx-auto p-20">
+                        <div class="space-y-4">
+                            <h4 class="text-7xl font-extrabold">Exotic tastes at your doorstep</h4>
+                            <p class="text-xl font-medium">
+                                We supply highly quality organic products
+                            </p>
+                            <button class="btn bg-primary text-white rounded-lg border-none w-48 md:w-32">Shop Now</button>
+                        </div>
+                    </div>
+                  
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle bg-sec border-none text-white hover:text-sec">❮</a> 
+                    <a href="#slide2" class="btn btn-circle bg-sec border-none text-white hover:text-sec">❯</a>
+                  </div>
+                </div>
 
+                <!-- slide 2 -->
+                <div id="slide2" class="carousel-item relative w-full img2 lg:h-[75vh]">
+                  <!-- content -->
+                  <div class="flex text-center justify-center items-center text-white w-4/5 mx-auto p-20">
+                    <div class="space-y-4">
+                        <h4 class="text-7xl font-extrabold">Exotic tastes at your doorstep</h4>
+                        <p class="text-xl font-medium">
+                            We supply highly quality organic products
+                        </p>
+                        <button class="btn bg-primary text-white rounded-lg border-none w-48 md:w-32">Shop Now</button>
+                    </div>
+                </div>
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle bg-sec border-none text-white hover:text-sec">❮</a> 
+                    <a href="#slide3" class="btn btn-circle bg-sec border-none text-white hover:text-sec">❯</a>
+                  </div>
+                </div> 
+
+                <!-- slide 3 -->
+                <div id="slide3" class="carousel-item relative w-full img3 lg:h-[75vh]">
+                    <!-- content -->
+                    <div class="flex text-center justify-center items-center text-white w-4/5 mx-auto p-20">
+                    <div class="space-y-4">
+                        <h4 class="text-7xl font-extrabold">Exotic tastes at your doorstep</h4>
+                        <p class="text-xl font-medium">
+                            We supply highly quality organic products
+                        </p>
+                        <button class="btn bg-primary text-white rounded-lg border-none w-48 md:w-32">Shop Now</button>
+                    </div>
+                </div>
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle bg-sec border-none text-white hover:text-sec">❮</a> 
+                    <a href="#slide4" class="btn btn-circle bg-sec border-none text-white hover:text-sec">❯</a>
+                  </div>
+                </div> 
+
+                <!-- slide 4 -->
+                <div id="slide4" class="carousel-item relative w-full img4 lg:h-[75vh]">
+                  <!-- content -->
+                  <div class="flex text-center justify-center items-center text-white w-4/5 mx-auto p-20">
+                    <div class="space-y-4">
+                        <h4 class="text-7xl font-extrabold">Exotic tastes at your doorstep</h4>
+                        <p class="text-xl font-medium">
+                            We supply highly quality organic products
+                        </p>
+                        <button class="btn bg-primary text-white rounded-lg border-none w-48 md:w-32">Shop Now</button>
+                    </div>
+                </div>
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle bg-sec border-none text-white hover:text-sec">❮</a> 
+                    <a href="#slide1" class="btn btn-circle bg-sec border-none text-white hover:text-sec">❯</a>
+                  </div>
+                </div>
+            </div>
         </section>
     </header>
 
