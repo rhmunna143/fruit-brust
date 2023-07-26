@@ -121,12 +121,22 @@
                 </div>
 
                 <!-- Hamburger Menu -->
-                <nav class="flex items-center justify-end lg:hidden">
-                    <button class="hamburger-btn px-2 py-4">
-                        <span class="block h-1 w-6 rounded bg-black"></span>
-                        <span class="block h-1 w-6 rounded bg-black mt-1"></span>
-                        <span class="block h-1 w-6 rounded bg-black mt-1"></span>
-                    </button>
+                <nav class="flex items-center lg:hidden">
+                    <div class="navbar-end">
+                        <div class="dropdown ">
+                            <button class="hamburger-btn px-2 py-4">
+                                <span class="block h-1 w-6 rounded bg-black"></span>
+                                <span class="block h-1 w-6 rounded bg-black mt-1"></span>
+                                <span class="block h-1 w-6 rounded bg-black mt-1"></span>
+                            </button>
+                          <ul tabindex="0" class="menu menu-sm dropdown-content right-0 w-[200px] top-8 mt-3 z-[1] p-2 shadow bg-base-100">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                          </ul>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </nav>
@@ -262,7 +272,7 @@
                     <div class="grid grid-flow-col gap-5 text-center capitalize auto-cols-max">
                         <div class="flex flex-col">
                           <span class="countdown font-extrabold text-5xl">
-                            <span style="--value:29;"></span>
+                            <span style="--value:29;"></span>:
                           </span>
                           days
                         </div> 
@@ -292,7 +302,28 @@
 
     <!-- footer section -->
     <footer>
-
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              
+              <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Item 1</a></li>
+                <li tabindex="0">
+                  <details>
+                    <summary>Parent</summary>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a>Item 3</a></li>
+              </ul>
+            </div>
+            
+          </div>
     </footer>
 </body>
 </html>
